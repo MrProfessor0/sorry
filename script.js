@@ -10,22 +10,31 @@ const gifStages = [
 ]
 
 const noMessages = [
-    "No",
-    "Are you positive? 🤔",
-    "Pookie please... 🥺",
-    "If you say no, I will be really sad...",
-    "I will be very sad... 😢",
-    "Please??? 💔",
-    "Don't do this to me...",
-    "Last chance! 😭",
-    "You can't catch me anyway 😜"
+    "I understand if you're not ready.",
+    "I know I hurt you… I'm still sorry.",
+    "I should have been there.",
+    "You deserved better from me.",
+    "I wish I handled things differently.",
+    "I know words aren't enough.",
+    "I don't expect instant forgiveness.",
+    "I know trust takes time.",
+    "I understand why you're upset.",
+    "I regret that moment deeply.",
+    "I’m trying to grow from this.",
+    "I know I can't force forgiveness.",
+    "I’ll respect your space.",
+    "Even if you say no, the apology is real.",
+    "That’s okay. I’ll give you space"
 ]
 
 const yesTeasePokes = [
-    "try saying no first... I bet you want to know what happens 😏",
-    "go on, hit no... just once 👀",
-    "you're missing out 😈",
-    "click no, I dare you 😏"
+    "PLEASE Only if you really mean it 🙂",
+    "PLEASE Take your time… no pressure.",
+    "PLEASE This would mean a lot to me.",
+    "PLEASE I promise I’m trying to do better.",
+    "PLEASE Thank you for even considering it.",
+    "PLEASE I won’t take it for granted again.",
+    "Thank you for forgiving me. Can we talk please"
 ]
 
 let yesTeasedCount = 0
@@ -93,9 +102,9 @@ function handleNoClick() {
 
     // Grow the Yes button bigger each time
     const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
-    yesBtn.style.fontSize = `${currentSize * 1.35}px`
-    const padY = Math.min(18 + noClickCount * 5, 60)
-    const padX = Math.min(45 + noClickCount * 10, 120)
+    yesBtn.style.fontSize = `${currentSize * 1.00}px`
+    const padY = Math.min(05 + noClickCount * 5, 60)
+    const padX = Math.min(20 + noClickCount * 10, 120)
     yesBtn.style.padding = `${padY}px ${padX}px`
 
     // Shrink No button to contrast
@@ -109,7 +118,7 @@ function handleNoClick() {
     swapGif(gifStages[gifIndex])
 
     // Runaway starts at click 5
-    if (noClickCount >= 5 && !runawayEnabled) {
+    if (noClickCount >= 13 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
     }
